@@ -15,7 +15,7 @@ public class DepartmentNotFoundExceptionHandler extends ResponseEntityExceptionH
 	@ExceptionHandler(value 
 		      = { DepartmentNotFoundException.class })
 		    protected ResponseEntity<Object> handleConflict(
-		      RuntimeException ex, WebRequest request) {
+		      Exception ex, WebRequest request) {
 		        String bodyOfResponse = "Department not found ";
 		        return handleExceptionInternal(ex, bodyOfResponse, 
 		          new HttpHeaders(), HttpStatus.NOT_FOUND, request);

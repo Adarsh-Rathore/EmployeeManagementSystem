@@ -1,7 +1,12 @@
 package com.employee.exception;
 
 public class DepartmentNotFoundException extends  Exception{
-	   public DepartmentNotFoundException(String message){
+	   /**
+	 * 
+	 */
+	private static final long serialVersionUID = -87100901126366229L;
+
+	public DepartmentNotFoundException(String message){
 	        super(message);
 	    }
 	}

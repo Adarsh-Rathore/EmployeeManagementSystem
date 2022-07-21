@@ -4,12 +4,9 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
-import java.time.LocalDate;
-import java.util.List;
 
 @Data // generates all the boilerplate that is normally associated with simple POJOs
 @NoArgsConstructor // will generate a constructor with no parameters

@@ -18,7 +18,7 @@ import java.util.List;
 //RESTful APIs
 @Slf4j // It offers a generic API making the logging independent of the actual implementation.
 @Controller // allows us to auto-detect implementation classes through the classpath scanning.
-@ResponseBody // tells a controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
+@ResponseBody @CrossOrigin(origins = "http://localhost:3000")// tells a controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
 @RequestMapping("employee") // the annotation is used to map web requests to Spring Controller methods.
 public class EmployeeController {
 
@@ -44,17 +44,11 @@ public class EmployeeController {
     @ApiOperation("Get A Employee By ID") // annotation to describe the endpoint and its response type
     @GetMapping("/getbyid/{id}")  // annotation that acts as a shortcut for @RequestMapping.
     public Employee fetchById(@PathVariable int id) throws EmployeeNotFoundException {
-
-        try{
             if (employeeService.fetchById(id)==null){
                 throw new EmployeeNotFoundException("Employee not found");
             }
             return employeeService.fetchById(id);
-        }
-        catch (EmployeeNotFoundException e){
-            System.out.println(e.getCause());
-            return employeeService.fetchById(id);
-        }
+        
     }
 
     @ApiOperation("Update An Existing Employee")

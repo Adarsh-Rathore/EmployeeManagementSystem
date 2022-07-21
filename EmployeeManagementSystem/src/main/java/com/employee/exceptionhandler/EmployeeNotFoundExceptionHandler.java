@@ -15,7 +15,7 @@ public class EmployeeNotFoundExceptionHandler extends ResponseEntityExceptionHan
 	@ExceptionHandler(value 
 		      = { EmployeeNotFoundException.class })
 		    protected ResponseEntity<Object> handleConflict(
-		      RuntimeException ex, WebRequest request) {
+		      Exception ex, WebRequest request) {
 		        String bodyOfResponse = "Employee not found ";
 		        return handleExceptionInternal(ex, bodyOfResponse, 
 		          new HttpHeaders(), HttpStatus.NOT_FOUND, request);
