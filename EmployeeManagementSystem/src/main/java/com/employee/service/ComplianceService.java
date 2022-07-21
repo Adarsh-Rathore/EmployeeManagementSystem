@@ -14,6 +14,5 @@ public interface ComplianceService {
 
     public Compliance getAllRL(int id);
 
-    public StatusReport createStatusReport(StatusReport statusReport);
 
 }

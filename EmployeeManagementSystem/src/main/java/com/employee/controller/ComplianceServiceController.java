@@ -46,12 +46,4 @@ public class ComplianceServiceController {
         return new ResponseEntity<>(comp, HttpStatus.CREATED);
     }
 
-    @ApiOperation("Save a New Compliance Record.")
-    @PostMapping("/create/status")
-    public ResponseEntity<StatusReport> createStatus(@Valid @RequestBody StatusReport statusReport) {
-
-        StatusReport stat = complianceService.createStatusReport(statusReport);
-        return new ResponseEntity<>(stat, HttpStatus.CREATED);
-    }
-
 }

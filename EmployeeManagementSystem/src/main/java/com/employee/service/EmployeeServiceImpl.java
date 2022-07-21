@@ -14,8 +14,20 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Autowired
     private EmployeeRepository employeeRepository;
+    public EmployeeServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+    
+   
+    
+    public EmployeeServiceImpl(EmployeeRepository employeeRepository) {
+		super();
+		this.employeeRepository = employeeRepository;
+	}
 
-    @Override
+
+
+	@Override
     public List<Employee> getAll() {
         System.out.println("employeeRepository Child Class Created By Spring Boot: " + employeeRepository.getClass().getName());
         return employeeRepository.findAll();
@@ -27,6 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         //two way relationship
         //many to one - (dept - emp)
         //
+        
         return employee;
     }
 
@@ -50,7 +63,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         cust.setFirstName(employee.getFirstName());
         cust.setLastName(employee.getLastName());
         cust.setEmail(employee.getEmail());
-        cust.setDob(employee.getDob());
 
         employeeRepository.save(cust);
     }

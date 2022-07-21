@@ -19,7 +19,7 @@ import java.util.List;
 @Slf4j // It offers a generic API making the logging independent of the actual implementation.
 @Controller // allows us to auto-detect implementation classes through the classpath scanning.
 @ResponseBody // tells a controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
-@RequestMapping("employees") // the annotation is used to map web requests to Spring Controller methods.
+@RequestMapping("employee") // the annotation is used to map web requests to Spring Controller methods.
 public class EmployeeController {
 
     @Autowired // Enabling annotation injection, we can use autowiring on properties, setters, and constructors.

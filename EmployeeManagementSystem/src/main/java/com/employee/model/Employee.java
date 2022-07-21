@@ -35,9 +35,8 @@ public class Employee {
     @NotNull(message = "Pls Enter Email")
     @Email
     private String email;
-    @NotNull
-    private LocalDate dob;
-    //Employee Email
+   
+
 
 
     @ManyToOne( cascade = CascadeType.MERGE)

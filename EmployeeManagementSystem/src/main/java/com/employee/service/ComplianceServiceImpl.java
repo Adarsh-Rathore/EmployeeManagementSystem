@@ -14,8 +14,7 @@ class ComplianceServiceImpl implements ComplianceService{
 
     @Autowired
     private ComplianceRepository complianceRepository;
-    @Autowired
-    private StatusReportRepository statusReportRepository;
+
 
     @Override
     public Compliance createRL(Compliance compliance) {
@@ -38,9 +37,5 @@ class ComplianceServiceImpl implements ComplianceService{
         return compliance;
     }
 
-    @Override
-    public StatusReport createStatusReport(StatusReport statusReport) {
-        statusReportRepository.save(statusReport);
-        return statusReport;
-    }
+    
 }

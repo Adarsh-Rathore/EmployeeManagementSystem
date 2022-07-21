@@ -28,19 +28,12 @@ public class Compliance {
     @NotNull(message = "Enter Details")
     private String details;
 
-    @NotNull(message = "Enter Date of creation")
-    private LocalDate createDate;
 
     @ManyToOne(targetEntity = Department.class, cascade = CascadeType.ALL) // annotations define many to one relations
     @JoinColumn(name = "deptTable", referencedColumnName = "departId") // marks a column for as a join column for an entity association or an element collection.
     private Department department;
 
-    @NotNull(message = "Enter employee count")
-    private int empCount;
-
-    @NotNull(message = "Enter Status Count")
-    private int stsCount;
-
+    
     @NotNull(message = "Enter Status")
     private String status;
     //our current status or current position

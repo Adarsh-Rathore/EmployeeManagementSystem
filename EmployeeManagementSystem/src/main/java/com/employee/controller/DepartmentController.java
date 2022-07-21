@@ -18,7 +18,7 @@ import java.util.List;
 //RESTful APIs
 @Slf4j // It offers a generic API making the logging independent of the actual implementation.
 @Controller // allows us to auto-detect implementation classes through the classpath scanning.
-@ResponseBody // tells a controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
+@ResponseBody  @CrossOrigin(origins = "http://localhost:3000")// tells a controller that the object returned is automatically serialized into JSON and passed back into the HttpResponse object.
 @RequestMapping("department") // the annotation is used to map web requests to Spring Controller methods.
 public class DepartmentController {
 
@@ -66,8 +66,8 @@ public class DepartmentController {
     // annotations, working (mapping, layers, MVC, JPA)
     @ApiOperation("Delete A department") // annotation to describe the endpoint and its response type
     @DeleteMapping("/delete/{departId}") // annotation maps HTTP DELETE requests onto specific handler methods
-    public ResponseEntity<Void> delete(@PathVariable int departId){
-        log.info("Deleting a department with id %d", departId);
+    public ResponseEntity<Void> delete(@PathVariable("departId") int departId){
+        log.info("Deleting a department with id " + departId);
         departmentService.deleteDepartment(departId);
         return  new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
