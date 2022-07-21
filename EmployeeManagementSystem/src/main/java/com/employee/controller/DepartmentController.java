@@ -48,13 +48,6 @@ public class DepartmentController {
         }
     }
 
-    @GetMapping("/getcount") // annotation that acts as a shortcut for @RequestMapping.
-    @ApiOperation("Fetch All Department Records") // annotation to describe the endpoint and its response type
-    public int getDepartmentsCount() {
-        log.info("INSIDE getDepartmentsCount");
-        return departmentService.getAllDepartCount();
-    }
-
     @ApiOperation("Save a New Department Record.") // annotation to describe the endpoint and its response type
     @PostMapping("/create") // Annotation for mapping HTTP POST requests onto specific handler methods.
     public ResponseEntity<Department> createDepartment(@Valid @RequestBody Department department) {

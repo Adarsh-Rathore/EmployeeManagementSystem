@@ -37,10 +37,6 @@ public class DepartmentServiceImpl implements DepartmentService{
         return department;
     }
 
-    @Override
-    public int getAllDepartCount() {
-        return (int)departmentRepository.count();
-    }
 
     @Override
     public void deleteDepartment(int id) {

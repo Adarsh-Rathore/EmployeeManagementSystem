@@ -14,8 +14,6 @@ public interface DepartmentService {
 
     Department fetchById(int id);
 
-    public int getAllDepartCount();
-
     public void deleteDepartment(int id);
 
 }
