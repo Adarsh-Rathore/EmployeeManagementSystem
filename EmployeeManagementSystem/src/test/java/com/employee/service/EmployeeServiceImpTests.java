@@ -1,8 +1,6 @@
-package com.b2;
+package com.employee.service;
 
 import static org.mockito.Mockito.verify;
-import java.time.LocalDate; 
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -13,12 +11,10 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import com.employee.model.Department;
 import com.employee.model.Employee;
 import com.employee.repository.EmployeeRepository;
-import com.employee.service.EmployeeService;
-import com.employee.service.EmployeeServiceImpl;
 
 
 @ExtendWith(MockitoExtension.class)
-public class EmployeeManagementSystemApplicationTests {
+public class EmployeeServiceImpTests {
 
 	@Mock
 	private EmployeeRepository employeeRepo;

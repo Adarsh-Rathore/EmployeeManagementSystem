@@ -15,8 +15,17 @@ public class DepartmentServiceImpl implements DepartmentService{
     @Autowired
     private DepartmentRepository departmentRepository;
 
+    
+    
+    public DepartmentServiceImpl() {
+	}
 
-    @Override
+	public DepartmentServiceImpl(DepartmentRepository departmentRepository) {
+		super();
+		this.departmentRepository = departmentRepository;
+	}
+
+	@Override
     public Department addDepartment(Department department) {
         departmentRepository.save(department);
         return department;

@@ -14,9 +14,19 @@ class ComplianceServiceImpl implements ComplianceService{
 
     @Autowired
     private ComplianceRepository complianceRepository;
+    
+    
 
+    public ComplianceServiceImpl(ComplianceRepository complianceRepository) {
+		super();
+		this.complianceRepository = complianceRepository;
+	}
 
-    @Override
+	public ComplianceServiceImpl() {
+		super();
+	}
+
+	@Override
     public Compliance createRL(Compliance compliance) {
         complianceRepository.save(compliance);
         return compliance;

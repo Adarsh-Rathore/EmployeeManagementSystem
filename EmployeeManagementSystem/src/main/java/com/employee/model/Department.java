@@ -13,4 +13,5 @@ public class Department {
     @Column(name = "departId", nullable = false)
     private int departId;
     private String departName;
+      
 }
