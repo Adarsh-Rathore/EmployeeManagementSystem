@@ -1,0 +1,41 @@
+body {
+  background-image: linear-gradient(to right, #f1b1b1 , #82e6e8);
+
+}
+
+.user-section{
+    width: 100%;
+    margin-top: 200px;
+}
+
+.user-section > .user-section-row{
+    justify-content: center;
+    text-align: center;
+}
+
+.user-card-form-section{
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.user-card-form-section > .col > .show > .card-body > form > div > .btn{
+    text-align: center;
+}
+
+.user-card-form-section > .col >.collapse{
+    margin-bottom: 20px;
+}
+
+.user-delete-input{
+    width: 50%;
+}
+
+.move-to-center{
+    text-align: center;
+}
+
+@media (max-width: 768px){
+    .user-delete-input{
+    width: 100%;
+}
+}
